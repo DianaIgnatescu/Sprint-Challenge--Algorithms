@@ -96,7 +96,20 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
+        # Initial plan:
+
+        # Use the light to determine when the sorting has completed.
+        # The steps would be to turn on the light, pick up an item and start moving right.
+        # While the light is not on:
+        #   - Turn on the robot's light.
+        # While the robot can move right:
+        #   - The first item will be None so swap the current item and move right.
+        #   - If the value of the held item is greater than the item in front of the robot, then swap the items, move left, and swap again.
+        #   - If there is nothing left to compare, then turn off the light.
+        #   - Otherwise move left and swap the items to leave that item where it was an move right.
+        # While the robot has reached the end of the list and can no longer move right and the light is turned off:
+        #   - The robot should turn back to the starting point.
+
         pass
 
 
